@@ -60,7 +60,7 @@ st.progress(progreso / len(preguntas))
 
 # --- Lógica principal ---
 if not st.session_state.finalizado:
-    if progreso  len(preguntas):
+    if progreso < len(preguntas):
         pregunta, opciones = preguntas[progreso]
         st.write(f"**{pregunta}**")
         seleccion = st.radio("Selecciona una opción:", opciones, key=f"preg_{progreso}")
